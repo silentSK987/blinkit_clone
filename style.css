@@ -1,10 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+nav {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
 .location > h5 {
   color: rgb(0, 0, 0);
   font-weight: 800;
   margin-bottom: 6px;
   font-size: 18px;
 }
-
 .location > p {
   margin: 0px;
   font-size: 13px;
@@ -32,12 +42,13 @@
 .div-search > input {
   border: none;
   background-color: transparent;
-  width: 40vw;
+  width: 35vw;
   height: 45px;
+  padding-left: 30px;
 }
 .div-search > input::placeholder {
   font-size: 18px;
-}  
+}
 .btn1 {
   font-size: 21px;
   font-weight: 400;
@@ -60,34 +71,87 @@
   align-items: center;
   display: flex;
 }
-.hero-section>img{
-    border-radius: 0px;
-    object-fit: fill;
-    cursor: default;
-    display:flex;
-    margin:auto;
+.hero-section {
+  padding-top: 100px;
 }
-.product-categories{
-  width:92%;
+.hero-section > img {
+  border-radius: 0px;
+  object-fit: fill;
+  cursor: default;
+  display: flex;
+  margin: auto;
+}
+.product-categories-section {
+  /* margin-left:30px */
+  width: 100vw;
+  text-align: center;
 }
 /* Scrolling-x start */
-.my-container{
-  margin:auto;
-  display: flex;
-  justify-content:center;
-  width:91%;
-  overflow-x:scroll;
+.my-container {
+  margin: auto;
+  width: 90vw;
 }
-.my-list{
-  width:100%;
-  white-space:nowrap;
-  display: flex;
-  justify-content:space-between;
+.my-list {
+  width: 100%;
+  white-space: nowrap;
+  justify-content: space-between;
+  overflow-x: scroll;
 }
-.my-list>img{
-  padding:10px;
+.my-list > img {
+  padding: 10px;
 }
-::-webkit-scrollbar{
+.my-list::-webkit-scrollbar {
   display: none;
 }
 /* Scrolling-x END */
+
+/* cards designing started */
+.category_1,
+.category_2,
+.category_3,
+.category_4,
+.category_5,
+.category_6 {
+  width: 90vw;
+  margin-inline: auto;
+}
+.category_1 > h2,
+.category_2 > h2,
+.category_3 > h2,
+.category_4 > h2, 
+.category_5 > h2,
+.category_6>h2 {
+  font-weight: 650 !important;
+}
+
+.category_1_items {
+  margin-inline: auto;
+  width: 90vw;
+}
+.my-list-2 {
+  overflow-x: scroll;
+}
+.my-list > .cards {
+  display: inline-block;
+}
+.cards {
+  width: 220px;
+  box-sizing: border-box;
+  margin-inline: 10px;
+}
+.cards > img {
+  display: inline-block;
+}
+.cards > .time {
+  font-size: 11px;
+  font-weight: 700;
+}
+.price > .btn {
+  width: 40%;
+  border: 1px solid green;
+  font-weight: 500;
+}
+/* card designing ended */
+.cards > h6 {
+  font-size: 14px;
+}
